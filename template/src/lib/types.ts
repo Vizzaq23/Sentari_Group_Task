@@ -28,4 +28,6 @@ export interface VoiceEntry {
 export interface ProcessedResult {
   summary: string;
   tagFrequencies: Record<string, number>;
-} 
+  wordFrequencies: Record<string, number>;
+  detectedIntentions: string[];
+}
