@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# IDEs/editors
+.vscode/
+.idea/
+
+# Test coverage and debug
+coverage/
+*.tsbuildinfo
+
+# Optional: CSV if you don't want to commit large fixtures
+Expanded_Diary_Entries.csv

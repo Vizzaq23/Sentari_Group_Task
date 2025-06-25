@@ -1,12 +1,13 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-// @ts-expect-error vitest types are provided via tsconfig "types"
-import { describe, it, expect } from 'vitest'
-import { mockVoiceEntries } from '../src/lib/mockData.js'
-import processEntries from '../src/lib/sampleFunction.js'
+import { describe, it, expect } from 'vitest';
+import processEntries from '../src/lib/sampleFunction.js';
 
 describe('processEntries', () => {
-  it('counts reflection tag correctly', () => {
-    const result = processEntries(mockVoiceEntries)
-    expect(result.tagFrequencies.reflection).toBe(mockVoiceEntries.length)
-  })
-}) 
+  it('returns a ProcessedResult with expected fields', () => {
+    const result = processEntries({});
+
+    expect(result).toHaveProperty('entryId');
+    expect(result).toHaveProperty('responseText');
+    expect(result).toHaveProperty('carryIn');
+  });
+});
